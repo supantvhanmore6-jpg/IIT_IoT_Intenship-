@@ -7,17 +7,16 @@ connection = mysql.connector.connect(
     port = 3306,
     user = "root",
     password = "root",
-    database = "iot_data",
+    database = "smart_agriculure",
     use_pure = True
 )
 
 # form a query to be executed
-rollno = int(input("Enter rollno : "))
-name = input("Enter name : ")
-email = input("Enter email : ")
-course = input("Enter course : ")
+id = int(input("Enter id : "))
+moisture = input("Enter moisture : ")
 
-query = f"insert into students values({rollno}, '{name}', '{email}', '{course}');"
+
+query = f"insert into smart_agriculure({id}, '{moisture}');"
 
 # create a cursor to execute a query
 cursor = connection.cursor()
